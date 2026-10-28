@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>College Chatbot Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>🎓 College Chatbot Dashboard</header>
+  <div class="container">
+    <div class="sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li onclick="showInfo('Admissions')">Admissions</li>
+        <li onclick="showInfo('Courses')">Courses</li>
+        <li onclick="showInfo('Fees')">Fees</li>
+        <li onclick="showInfo('Scholarships')">Scholarships</li>
+        <li onclick="showInfo('Attendance')">Attendance</li>
+        <li onclick="showInfo('Hostel')">Hostel</li>
+        <li onclick="showInfo('Library')">Library</li>
+        <li onclick="showInfo('Contact')">Contact Info</li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="chatbox" id="chatbox">
+        <h2>Ask Me Anything!</h2>
+        <div id="response">Welcome! Select a topic from the menu or type your question below.</div>
+        <div class="input-area">
+          <input type="text" id="userInput" placeholder="Type your question...">
+          <button onclick="getResponse()">Send</button>
+        </div>
+      </div>
+      <canvas id="attendanceChart"></canvas>
+      <canvas id="scholarshipChart"></canvas>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
